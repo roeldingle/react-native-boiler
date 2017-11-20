@@ -21,7 +21,7 @@ export default class SettingsPage extends Component<{}> {
       'Logout',
       'Are you sure you want to logout?',
       [
-        {text: 'Yes', onPress: () => this._logout() },
+        {text: 'Yes', onPress: this._logout},
         {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
       ],
       { cancelable: false }
@@ -32,10 +32,12 @@ export default class SettingsPage extends Component<{}> {
       // try {
       //     await firebase.auth().signOut();
       //     // Navigate to login view
+      //     Actions.login();
       // } catch (error) {
       //     console.log(error);
       // }
-      alert("sdhshdhsd");
+
+      Actions.login();
   }
 
   render() {
