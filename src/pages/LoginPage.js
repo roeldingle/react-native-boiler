@@ -28,7 +28,7 @@ export default class LoginPage extends Component<{}> {
       	<LogoComp />
       	<LoginFormComp/>
       	<View style={styles.footer}>
-      		
+
       		<TouchableOpacity onPress={this._navigateRegister}>
             <Text style={styles.txtLinkFooter}> Register</Text>
           </TouchableOpacity>

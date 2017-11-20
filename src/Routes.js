@@ -6,6 +6,8 @@ import {
 import { Router, Stack, Scene, Actions, Drawer } from 'react-native-router-flux';
 
 
+
+
 /*pages*/
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
@@ -37,23 +39,23 @@ class TabIcon extends Component {
 export default class Routes extends Component<{}> {
   render() {
     return (
-      <Router 
-        navigationBarStyle={{ backgroundColor: '#c2185b', top:0 }} 
+      <Router
+        navigationBarStyle={{ backgroundColor: '#c2185b', top:0 }}
         titleStyle={{ color: '#ffffff', width: 200 }}
         >
       	<Stack key="root">
       		<Scene key="login" component={LoginPage} title="LoginPage" hideNavBar={true} initial={true}/>
       		<Scene key="register" component={RegisterPage} title="RegisterPage" hideNavBar={true} />
 
-          <Scene 
-            key="tabs" 
-            tabs 
-            hideNavBar 
-            tabBarPosition='bottom' 
+          <Scene
+            key="tabs"
+            tabs
+            hideNavBar
+            tabBarPosition='bottom'
             tabBarStyle={{backgroundColor:'#8c0032'}}
             labelStyle={{color:'#ffffff'}}
             activeBackgroundColor='#c2185b'
-            > 
+            >
               <Scene key="home" title="Home" >
                 <Scene key="homeTab" icon={TabIcon} iconName="home" component={HomePage} title="Home" renderBackButton={()=>(null)} />
               </Scene>
